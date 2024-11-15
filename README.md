@@ -31,7 +31,7 @@ Follow these steps to get the Chat WebApp up and running:
 Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/10cyrilc/FireChat.git
+git clone https://github.com/yourusername/FireChat.git
 cd FireChat
 ```
 
