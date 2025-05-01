@@ -1,11 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import { lazy, useContext } from "react";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 
-import { useContext } from "react";
+const Home = lazy(()=> import("./pages/Home"));
+const Login = lazy(()=> import("./pages/Login"));
+const Register = lazy(()=> import("./pages/Register"));
+
 import { AuthContext } from "./context/AuthContext";
-import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
