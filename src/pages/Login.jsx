@@ -25,7 +25,7 @@ function Login() {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (error) {
-      setError(errorMessage);
+      setError(error.message);
       setLoading(false);
     }
     setLoading(false);
